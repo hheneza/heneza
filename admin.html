@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>پنل مدیریت</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div id="login-box">
+    <h2>ورود مدیر</h2>
+    <input type="email" id="adminEmail" placeholder="ایمیل">
+    <input type="password" id="adminPassword" placeholder="رمز عبور">
+    <button onclick="login()">ورود</button>
+    <p id="loginError"></p>
+  </div>
+
+  <div id="dashboard" style="display:none;">
+    <h2>افزودن محصول</h2>
+    <input type="text" id="productName" placeholder="نام محصول">
+    <input type="text" id="productDescription" placeholder="توضیحات">
+    <input type="number" id="productPrice" placeholder="قیمت">
+    <input type="text" id="productImage" placeholder="لینک تصویر">
+    <button onclick="addProduct()">افزودن</button>
+
+    <div id="product-list" class="product-list"></div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
